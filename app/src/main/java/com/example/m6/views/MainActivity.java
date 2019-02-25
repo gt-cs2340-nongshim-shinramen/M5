@@ -1,4 +1,4 @@
-package com.example.m5.views;
+package com.example.m6.views;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.m5.R;
+import com.example.m6.R;
 
 public class MainActivity extends AppCompatActivity {
 

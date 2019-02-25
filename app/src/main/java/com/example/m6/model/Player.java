@@ -1,4 +1,4 @@
-package com.example.m5.model;
+package com.example.m6.model;
 
 import java.util.Arrays;
 import java.util.List;

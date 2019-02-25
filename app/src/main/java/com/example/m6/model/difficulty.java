@@ -1,7 +1,7 @@
-package com.example.m5.model;
+package com.example.m6.model;
 
 public enum difficulty {
-    BEGINER ("Beginer"),
+    BEGINNER ("Beginner"),
     EASY ("Easy"),
     NORMAL("Normal"),
     HARD("Hard"),

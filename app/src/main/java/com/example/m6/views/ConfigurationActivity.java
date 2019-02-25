@@ -1,9 +1,9 @@
-package com.example.m5.views;
+package com.example.m6.views;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,9 +12,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.m5.R;
-import com.example.m5.model.Player;
-import com.example.m5.model.difficulty;
+import com.example.m6.R;
+import com.example.m6.model.Player;
 
 public class ConfigurationActivity extends AppCompatActivity {
 
@@ -62,7 +61,6 @@ public class ConfigurationActivity extends AppCompatActivity {
                     return;
                 }
 
-
                 int nPilot_point = Integer.parseInt(sPilot_point);
                 int nFighter_point = Integer.parseInt(sFighter_point);
                 int nTrader_point = Integer.parseInt(sTrader_point);
@@ -74,18 +72,23 @@ public class ConfigurationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "the sum of skill point should be 16", Toast.LENGTH_LONG).show();
                 } else {
                     player = new Player(name, nPilot_point, nFighter_point, nTrader_point, nEngineer_point, difficulty);
-                    String showStat = player.toString();
-                    Toast.makeText(getApplicationContext(), showStat, Toast.LENGTH_LONG).show();
-                    Log.d("player", player.toString());
+//                    String showStat = player.toString();
+//                    Toast.makeText(getApplicationContext(), showStat, Toast.LENGTH_LONG).show();
+                    Log.d("system", player.toString());
+                    openUniverse();
                 }
+
 
             }
         });
+    }
 
+    // open Next page which is Universe
+    public void openUniverse() {
+        Intent intent = new Intent(this, UniverseActivity.class);
+        startActivity(intent);
     }
 
 }
-
-//    final Button save_button = findViewById(R.id.save_button);
 
 
